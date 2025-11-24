@@ -1,4 +1,4 @@
 def call(String projectName,String imageName,String dockerHubUser){
-  echo 'this is building code'
-  sh 'docker build -t ${dockerHubUser}/${projectName}:${imageName} .'
+  echo "Building Docker image: ${dockerHubUser}/${projectName}:${imageName}"
+  sh "docker build -t ${dockerHubUser}/${projectName}:${imageName} ."
 }
